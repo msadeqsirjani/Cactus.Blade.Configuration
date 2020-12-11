@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Cactus.Blade.Configuration</AssemblyName>
+    <RootNamespace>Cactus.Blade.Configuration</RootNamespace>
+    <Version>1.2.0</Version>
+    <Authors>Mohammad Sadeq Sirjani</Authors>
+    <Product>Cactus</Product>
+    <Description>Defines a static Config class as a general replacement for the old .NET Framework ConfigurationManager class.</Description>
+    <PackageReleaseNotes>Defines a static Config class as a general replacement for the old .NET Framework ConfigurationManager class.</PackageReleaseNotes>
+    <Copyright>@Copyright 2020</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>cactus.png</PackageIcon>
+    <RepositoryUrl>https://github.com/mohammadsadeqsirjani/Cactus/tree/master/Configuration</RepositoryUrl>
+    <RepositoryType>https://github.com/mohammadsadeqsirjani/Cactus/tree/master/Configuration</RepositoryType>
+    <NeutralLanguage>C#</NeutralLanguage>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cactus.Blade.Core" Version="1.2.0" />
+    <PackageReference Include="Cactus.Blade.Immutable" Version="1.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Image\cactus.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
