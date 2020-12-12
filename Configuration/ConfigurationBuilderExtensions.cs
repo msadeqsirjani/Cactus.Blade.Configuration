@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using System;
 
 namespace Cactus.Blade.Configuration
@@ -27,6 +28,21 @@ namespace Cactus.Blade.Configuration
             Config.SetRoot(builder.Build);
 
             return builder;
+        }
+
+        /// <summary>
+        /// Sets the value of the <see cref="Config.Root"/> property to the <see cref="IConfiguration"/>
+        /// containing the merged configuration of the application and the <see cref="IWebHost"/>.
+        /// </summary>
+        /// <param name="builder">The <see cref="IWebHostBuilder"/> to configure.</param>
+        /// <returns>The <see cref="IWebHostBuilder"/>.</returns>
+        public static IWebHostBuilder SetConfigRoot(this IWebHostBuilder builder)
+        {
+            return builder.ConfigureServices((context, services) =>
+            {
+                if (!Config.IsLocked && Config.IsDefault)
+                    Config.SetRoot(context.Configuration);
+            });
         }
 
         /// <summary>
