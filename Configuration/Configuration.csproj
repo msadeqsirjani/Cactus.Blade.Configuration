@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>Cactus.Blade.Configuration</AssemblyName>
     <RootNamespace>Cactus.Blade.Configuration</RootNamespace>
-    <Version>1.2.1</Version>
+    <Version>1.2.2</Version>
     <Authors>Mohammad Sadeq Sirjani</Authors>
     <Product>Cactus</Product>
     <Description>Defines a static Config class as a general replacement for the old .NET Framework ConfigurationManager class.</Description>
@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <PackageReference Include="Cactus.Blade.Core" Version="1.2.0" />
-    <PackageReference Include="Cactus.Blade.Immutable" Version="1.2.0" />
+    <PackageReference Include="Cactus.Blade.Immutable" Version="1.2.1" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="5.0.0" />
